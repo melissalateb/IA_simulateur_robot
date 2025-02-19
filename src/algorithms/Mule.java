@@ -40,12 +40,12 @@ public class Mule extends Brain {
       return;
     }
     if (detectFront().getObjectType()==IFrontSensorResult.Types.OpponentMainBot) {
-      fire(getHeading());
+      //fire(getHeading());
       return;
     }
     if (!(detectFront().getObjectType()==IFrontSensorResult.Types.WALL || detectFront().getObjectType()==IFrontSensorResult.Types.Wreck)) {
       if (Math.random()<0.98) move(); //And what to do when blind blocked?
-      else fire(getHeading());
+      // else fire(getHeading());
       sendLogMessage("Moving a head. Waza!");
     } else {
       turnLeftTask=true;
